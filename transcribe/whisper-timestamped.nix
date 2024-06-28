@@ -1,6 +1,6 @@
-{ pkg-s, ...}:
+{ pkgs, ...}:
 {
-  home.packages = with pkg-s; [
+  home.packages = with pkgs; [
     openai-whisper
     (python311Packages.buildPythonPackage rec {
       pname = "whisper-timestamped";
