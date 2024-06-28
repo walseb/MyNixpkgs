@@ -1,4 +1,5 @@
 { pkgs, ...}:
+
 pkgs.python311Packages.buildPythonPackage {
   pname = "whisper-timestamped";
   version = "master";
@@ -9,16 +10,16 @@ pkgs.python311Packages.buildPythonPackage {
   };
   doCheck = false;
   buildInputs = [
-    pkgs.python310Packages.openai-whisper 
-    pkgs.python310Packages.dtw-python
+    pkgs.python311Packages.openai-whisper
+    pkgs.python311Packages.dtw-python
   ];
   nativeBuildInputs = [
-    pkgs.python310Packages.openai-whisper 
-    pkgs.python310Packages.dtw-python
+    pkgs.python311Packages.openai-whisper
+    pkgs.python311Packages.dtw-python
   ];
   propagatedBuildInputs = [
-    pkgs.python310Packages.openai-whisper 
-    pkgs.python310Packages.dtw-python
+    pkgs.python311Packages.openai-whisper
+    pkgs.python311Packages.dtw-python
   ];
 }
 # https://github.com/linto-ai/whisper-timestamped/commit/a82e4d884a504625e8d6a98265272e2cb14c0901
