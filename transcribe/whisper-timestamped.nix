@@ -1,5 +1,5 @@
 { pkgs, ...}:
-(pkgs.python311Packages.buildPythonPackage rec {
+pkgs.python311Packages.buildPythonPackage {
   pname = "whisper-timestamped";
   version = "master";
   src = fetchGit {
@@ -20,5 +20,5 @@
     pkgs.python3Packages.openai-whisper 
     pkgs.python311Packages.dtw-python
   ];
-})
+}
 # https://github.com/linto-ai/whisper-timestamped/commit/a82e4d884a504625e8d6a98265272e2cb14c0901
